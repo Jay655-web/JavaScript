@@ -21,19 +21,15 @@
 //     countlabel.textContent = count;
 
 //     console.log(count)
-// }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// 
+// GREETING PROGRAM
+let name1 = document.getElementById("name").value;
+let btn = document.getElementById("btn");
+let newh = document.getElementById("htext");
+
+btn.onclick = function(){
+    newh.textContent = `Hello ${name1}, Welcome to the site.`;
+}
+
+
+
