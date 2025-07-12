@@ -262,17 +262,79 @@ function generatePassword(length, includeLowercase, includeUppercase, includeNum
 
 }
 
-const passwordLength = 12;
-const includeLowercase = true;
-const includeUppercase = true;
-const includeNumbers = true;
-const includeSymbols = true;
-
-const passsword = generatePassword(passwordLength,
-                                     includeLowercase,
-                                        includeUppercase,
-                                            includeNumbers,
-                                                includeSymbols);
 
 
-console.log(`Generated Password: ${passsword}`);
+//     const passwordLength = document.getElementById("length").value;
+//     const includeLowercase =  document.getElementById("includeLowercase"); //true;
+//     const includeUppercase =  document.getElementById("includeUppercase"); //true;
+//     const includeNumbers =   document.getElementById("includeNumber"); //true;
+//     const includeSymbols =  document.getElementById("includeSymbols"); //true;
+
+//     const passwordPara = document.getElementById("password");
+//     let password;
+
+// function generate(){
+
+//     if(includeLowercase.checked){
+//         includeLowercase = true;
+//     }
+//     else{
+//         includeLowercase = false;
+//     }
+
+//     if(includeUppercase.checked){
+//         includeUppercase = true;
+//     }
+//     else{
+//         includeUppercase = false;
+//     }
+
+//     if(includeNumbers.checked){
+//         includeNumbers = true;
+//     }
+//     else{
+//         includeNumbers = false;
+//     }
+
+//     if(includeSymbols.checked){
+//         includeSymbols = true;
+//     }
+//     else{
+//         includeSymbols = false;
+//     }
+
+//     const password = generatePassword(
+//                                         passwordLength,
+//                                         includeLowercase,
+//                                         includeUppercase,
+//                                         includeNumbers,
+//                                         includeSymbols
+//                                     );
+
+
+//     passwordPara.textContent = `Generated password is ${password}`;
+
+//     console.log(`Generated Password: ${password}`);
+
+
+// }
+
+function generate() {
+    const passwordLength = parseInt(document.getElementById("length").value, 10);
+    const includeLowercase = document.getElementById("includeLowercase").checked;
+    const includeUppercase = document.getElementById("includeUppercase").checked;
+    const includeNumbers = document.getElementById("includeNumber").checked;
+    const includeSymbols = document.getElementById("includeSymbols").checked;
+    const passwordPara = document.getElementById("password");
+
+    const password = generatePassword(
+        passwordLength,
+        includeLowercase,
+        includeUppercase,
+        includeNumbers,
+        includeSymbols
+    );
+
+    passwordPara.textContent = `Generated password is ${password}`;
+    console.log(`Generated Password: ${password}`);
+}

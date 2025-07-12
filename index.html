@@ -10,7 +10,7 @@
     <div id="container">
         <h1>Password Generator</h1>
         <br>
-        <label for="include" id="spec">Specify what characters to include in password :</label>
+        <p>Specify what characters to include in password :</p>
         <br>
         <input type="checkbox" id="includeLowercase" class="box" >
         <label for="includeLowercase">Lowercase</label>
@@ -27,9 +27,12 @@
         <br>
         <label for="length">Password length : </label>
         <input type="number" min="8" value="8" id="length">
-        <button id="generate" onclick="generatePassword()">Generate Password</button>
+        <button type="submit" onclick="generate()">Generate Password</button>
 
-        <p id="password">jfkhh</p>
+        <div class="password">
+           <p id="password"></p> 
+        </div>
+        
     </div>
     <script src="index.js"></script>
 </body>
