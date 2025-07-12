@@ -7,25 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="contianer">
+    <div id="container">
         <h1>Password Generator</h1>
-        <label for="length">Choose a password length: </label>
-        <input type="number" min="8" value="8" id="length">
         <br>
-        <label for="include">Specify what characters to include in password :</label>
+        <label for="include" id="spec">Specify what characters to include in password :</label>
         <br>
-        <input type="checkbox" id="includeLowercase" >
+        <input type="checkbox" id="includeLowercase" class="box" >
         <label for="includeLowercase">Lowercase</label>
         <br>
-        <input type="checkbox" id="includeUppercase" >
+        <input type="checkbox" id="includeUppercase" class="box" >
         <label for="includeUppercase">Uppercase</label>
         <br>
-        <input type="checkbox" id="includeNumber" >
+        <input type="checkbox" id="includeNumber" class="box" >
         <label for="includeNumber">Number</label>
         <br>
-        <input type="checkbox" id="includeSymbols" >
+        <input type="checkbox" id="includeSymbols" class="box" >
         <label for="includeSymbols">Symbols</label>
         <br>
+        <br>
+        <label for="length">Password length : </label>
+        <input type="number" min="8" value="8" id="length">
+        <button id="generate" onclick="generatePassword()">Generate Password</button>
+
+        <p id="password">jfkhh</p>
     </div>
     <script src="index.js"></script>
 </body>
